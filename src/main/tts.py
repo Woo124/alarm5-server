@@ -18,6 +18,9 @@ def get_filename():
 
 def text_to_speech(text: str, language: str = 'ko') -> str:
     speech = gTTS(text=text, lang=language, slow=False)
+    print("----------------")
+    print(speech)
+    print("----------------")
 
     filename = get_filename()
     speech.save(filename)
